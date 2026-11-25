@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   HUMAN, CPU, emptyBoard, evaluate, availableMoves, cpuMove,
-} from '../game.js';
+} from '../www/game.js';
 
 test('detects row, column and diagonal wins', () => {
   const b = emptyBoard();

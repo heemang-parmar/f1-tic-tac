@@ -1,0 +1,26 @@
+{
+  "appId": "com.oneinfinitylabs.gridtactoe",
+  "appName": "Grid Tac Toe",
+  "webDir": "www",
+  "backgroundColor": "#0e0e14",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#0e0e14"
+  },
+  "android": {
+    "backgroundColor": "#0e0e14"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 600,
+      "launchAutoHide": true,
+      "backgroundColor": "#0e0e14",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "overlaysWebView": true,
+      "backgroundColor": "#00000000"
+    }
+  }
+}

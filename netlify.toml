@@ -1,0 +1,9 @@
+# Netlify: the game is a static site in www/ (no build step).
+[build]
+  publish = "www"
+  command = ""
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"

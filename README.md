@@ -19,38 +19,46 @@ A Formula 1 themed tic-tac-toe game for your phone. You race your car against a 
 - **Pick your livery** from six car colours.
 - **Pole position**: you start, the rival starts, or alternate each race.
 - **Championship points**: 25 for a win, 10 for a draw. Points and W/D/L are saved on the device.
-- Engine and tyre sound effects (synthesised, no audio files), haptic buzzes on Android, and confetti when you win.
+- Engine and tyre sound effects (synthesised, no audio files), haptics (native on iPhone and Android in the app), and confetti when you win.
 - **Mobile-first**: one-handed play, safe-area aware for notched phones, no zooming or scrolling during a race.
 - **Installable PWA** that works offline after the first visit.
 - Accessible: real buttons with screen-reader labels, arrow-key navigation, and reduced-motion support.
 
 ## Play it
 
-It's a static site with no build step and no dependencies. Serve the folder over HTTP:
+**On the web:** https://grid-tac-toe.netlify.app. Add it to your home screen (iPhone: Share → *Add to Home Screen*; Android: ⋮ → *Install app*) and it works offline.
+
+**Locally:** the game is a static site in `www/` with no build step.
 
 ```bash
-npm start              # serves on http://localhost:5173
-# or
-python3 -m http.server 5173
+npm install
+npm start              # http://localhost:5173
 ```
 
-To try it on your phone, open the address from a phone on the same Wi-Fi (`http://<your-computer-ip>:5173`), or deploy the folder to any static host (GitHub Pages, Netlify, Vercel, Cloudflare Pages).
+## Native apps (App Store / Google Play)
 
-**Install it like an app:**
-- **iPhone (Safari):** Share → *Add to Home Screen*
-- **Android (Chrome):** ⋮ menu → *Install app* / *Add to Home screen*
+`ios/` and `android/` are [Capacitor](https://capacitorjs.com) projects that package `www/` as native apps,
+with native haptics, a splash screen and portrait lock. See:
 
-Once installed, it opens full screen and works offline.
+- **[RELEASE.md](RELEASE.md)**: step-by-step build, signing and store submission from a Mac.
+- **[STORE.md](STORE.md)**: ready-to-paste store listing text, privacy and rating answers.
+- **`store/`**: App Store and Play screenshots and the feature graphic.
+
+After changing anything in `www/`, run `npx cap sync` to copy it into the native projects.
 
 ## Project layout
 
-| File | What it does |
+| Path | What it does |
 | --- | --- |
-| `index.html` | Screens (garage, race, start lights, result) and the car/tyre SVG sprites |
-| `styles.css` | All styling and animations |
-| `app.js` | UI, game flow, sound, haptics, saved stats |
-| `game.js` | Pure game logic and the three AI difficulty levels |
-| `sw.js`, `manifest.webmanifest`, `icons/` | PWA install and offline support |
+| `www/index.html` | Screens (garage, race, start lights, result) and the car/tyre SVG sprites |
+| `www/styles.css` | All styling and animations |
+| `www/app.js` | UI, game flow, sound, haptics, saved stats |
+| `www/game.js` | Pure game logic and the three AI difficulty levels |
+| `www/privacy.html`, `www/support.html` | Privacy policy and support pages (store requirements) |
+| `www/sw.js`, `www/manifest.webmanifest`, `www/icons/` | PWA install and offline support |
+| `www/fonts/` | Titillium Web, bundled (SIL Open Font License) |
+| `ios/`, `android/`, `capacitor.config.json` | Native app projects |
+| `assets/`, `scripts/` | Icon/splash sources and the generators for icons and store screenshots |
 | `test/game.test.js` | Logic tests, including an exhaustive check that Champion never loses |
 
 ## Tests

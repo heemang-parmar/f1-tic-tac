@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Grid Tac Toe</string>
+    <string name="title_activity_main">Grid Tac Toe</string>
+    <string name="package_name">com.oneinfinitylabs.gridtactoe</string>
+    <string name="custom_url_scheme">com.oneinfinitylabs.gridtactoe</string>
+</resources>

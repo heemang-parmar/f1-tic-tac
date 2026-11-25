@@ -1,2 +1,12 @@
 node_modules/
 .DS_Store
+
+# Native build outputs and signing secrets
+android/keystore.properties
+*.jks
+*.keystore
+android/app/build/
+android/build/
+android/.gradle/
+ios/App/build/
+ios/DerivedData/

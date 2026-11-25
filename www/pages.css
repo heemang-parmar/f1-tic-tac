@@ -1,0 +1,23 @@
+@font-face { font-family: 'Titillium Web'; font-weight: 400; font-display: swap; src: url('fonts/titillium-web-400.woff2') format('woff2'); }
+@font-face { font-family: 'Titillium Web'; font-weight: 700; font-display: swap; src: url('fonts/titillium-web-700.woff2') format('woff2'); }
+@font-face { font-family: 'Titillium Web'; font-weight: 900; font-display: swap; src: url('fonts/titillium-web-900.woff2') format('woff2'); }
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0e0e14;
+  color: #e9e9ef;
+  font: 17px/1.6 'Titillium Web', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  border-top: 8px solid transparent;
+  border-image: repeating-linear-gradient(90deg, #e10600 0 22px, #fff 22px 44px) 8;
+}
+.doc { max-width: 680px; margin: 0 auto; padding: 28px 16px 64px; }
+h1 { font-size: 2.4rem; font-weight: 900; font-style: italic; text-transform: uppercase; margin: 12px 0 4px; line-height: 1.1; }
+h2 { font-size: 1.2rem; margin: 28px 0 6px; color: #fff; }
+a { color: #ff5a4f; }
+.back { color: #9b9bab; text-decoration: none; font-weight: 700; }
+.meta, .fine { color: #9b9bab; font-size: .9rem; }
+.fine { margin-top: 40px; }
+ul { padding-left: 1.2em; }
+li { margin: 4px 0; }
