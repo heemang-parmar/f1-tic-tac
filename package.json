@@ -1,0 +1,11 @@
+{
+  "name": "grid-tac-toe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Formula 1 themed tic-tac-toe for phones — single player vs the computer.",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve@14.2.4 -l 5173 .",
+    "test": "node --test"
+  }
+}
