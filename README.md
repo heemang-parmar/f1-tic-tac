@@ -1,5 +1,7 @@
 # Grid Tac Toe 🏁
 
+**▶ Play now: https://grid-tac-toe.netlify.app** (open it on your phone)
+
 A Formula 1 themed tic-tac-toe game for your phone. You race your car against a computer rival's tyres on a 3×3 starting grid. Get three in a row to take the chequered flag.
 
 <p>
